@@ -32,6 +32,10 @@
 		09A943D31A4EB5F500C8A04F /* Sodium.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 09A943C71A4EB5F500C8A04F /* Sodium.framework */; };
 		09A943DA1A4EB5F500C8A04F /* SodiumTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 09A943D91A4EB5F500C8A04F /* SodiumTests.swift */; };
 		28FA5A1520C9E71F00D7BE2B /* Aead.swift in Sources */ = {isa = PBXBuildFile; fileRef = F87EEC3F2063C655006C830D /* Aead.swift */; };
+		44D2159D26DF81F100BC346C /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2159C26DF81F100BC346C /* Scalar.swift */; };
+		44D2159E26DF81F100BC346C /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2159C26DF81F100BC346C /* Scalar.swift */; };
+		44D2159F26DF81F100BC346C /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2159C26DF81F100BC346C /* Scalar.swift */; };
+		44D215A026DF81F100BC346C /* Scalar.swift in Sources */ = {isa = PBXBuildFile; fileRef = 44D2159C26DF81F100BC346C /* Scalar.swift */; };
 		53008F84253608B0006FE4EF /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53008F7F253608B0006FE4EF /* ViewController.swift */; };
 		53008F86253608B0006FE4EF /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 53008F81253608B0006FE4EF /* Assets.xcassets */; };
 		53008F87253608B0006FE4EF /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53008F82253608B0006FE4EF /* AppDelegate.swift */; };
@@ -342,6 +346,7 @@
 		09BB142E1E75CA6F00659F17 /* crypto_kx.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_kx.h; sourceTree = "<group>"; };
 		09BB142F1E75CA6F00659F17 /* crypto_secretbox_xchacha20poly1305.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_secretbox_xchacha20poly1305.h; sourceTree = "<group>"; };
 		09BB14301E75CA6F00659F17 /* crypto_stream_xchacha20.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = crypto_stream_xchacha20.h; sourceTree = "<group>"; };
+		44D2159C26DF81F100BC346C /* Scalar.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Scalar.swift; sourceTree = "<group>"; };
 		53008F6D25360875006FE4EF /* Example tvOS.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Example tvOS.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		53008F7F253608B0006FE4EF /* ViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = ViewController.swift; path = Examples/tvOS/ViewController.swift; sourceTree = "<group>"; };
 		53008F81253608B0006FE4EF /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Assets.xcassets; path = Examples/tvOS/Assets.xcassets; sourceTree = "<group>"; };
@@ -528,6 +533,7 @@
 				D2A274051F13AD9300958702 /* KeyDerivation.swift */,
 				09A5AC111F74466700D3200B /* SecretStream.swift */,
 				F87EEC3F2063C655006C830D /* Aead.swift */,
+				44D2159C26DF81F100BC346C /* Scalar.swift */,
 			);
 			path = Sodium;
 			sourceTree = "<group>";
@@ -1149,6 +1155,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D6373E21E7B5E0800F04E72 /* KeyExchange.swift in Sources */,
+				44D2159D26DF81F100BC346C /* Scalar.swift in Sources */,
 				095D80551A4ECCD7000B83F9 /* Sodium.swift in Sources */,
 				097F20DA1AF127480088C2FE /* PWHash.swift in Sources */,
 				DD1E4D0F20922C9E00BE7A3F /* ExitCode.swift in Sources */,
@@ -1197,6 +1204,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53008F9F253609D1006FE4EF /* Box.swift in Sources */,
+				44D215A026DF81F100BC346C /* Scalar.swift in Sources */,
 				53008FA0253609D1006FE4EF /* Bytes.swift in Sources */,
 				53008FA1253609D1006FE4EF /* NonceGenerator.swift in Sources */,
 				53008FA2253609D1006FE4EF /* KeyPairGenerator.swift in Sources */,
@@ -1245,6 +1253,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				7D6373E31E7B6C6E00F04E72 /* KeyExchange.swift in Sources */,
+				44D2159E26DF81F100BC346C /* Scalar.swift in Sources */,
 				28FA5A1520C9E71F00D7BE2B /* Aead.swift in Sources */,
 				90C75EE51AE3583E00F1E749 /* Box.swift in Sources */,
 				90C75EE61AE3583E00F1E749 /* SecretBox.swift in Sources */,
@@ -1284,6 +1293,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				D891FE9E2164323A0092AA84 /* Box.swift in Sources */,
+				44D2159F26DF81F100BC346C /* Scalar.swift in Sources */,
 				D891FE9F2164323A0092AA84 /* Bytes.swift in Sources */,
 				D891FEA02164323A0092AA84 /* NonceGenerator.swift in Sources */,
 				D891FEA12164323A0092AA84 /* KeyPairGenerator.swift in Sources */,

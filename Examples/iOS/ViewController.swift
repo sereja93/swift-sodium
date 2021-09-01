@@ -27,6 +27,22 @@ class ViewController: UIViewController {
                 recipientSecretKey: aliceKeyPair.secretKey)
 
         print("Decrypted Message:\(messageVerifiedAndDecryptedByBob!.utf8String!)")
+        
+        
+       let data =  sodium.scalar.cryptoScalarMult(publicKey: "TCtY-E8kl3mH5T0JTggJYgR5du4CxCBd73sdgT-WQXU".bytes, secretKey: "TCtY-E8kl3mH5T0JTggJYgR5du4CxCBd73sdgT-WQX1".bytes)!
+    print("----")
+        
+       let s = data.reduce(into: "") {
+          var s = String($1, radix: 16)
+          if s.count == 1 {
+            s = "0" + s
+          }
+          $0 += s
+        }
+        
+        print(s)
+
+    
 
     }
 

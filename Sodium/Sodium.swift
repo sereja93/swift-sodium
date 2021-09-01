@@ -17,6 +17,7 @@ public struct Sodium {
     public let secretStream = SecretStream()
     public let aead = Aead()
     public let version = Version()
+    public let scalar = Scalar()
 
     public init() {
         _ = Sodium.once
