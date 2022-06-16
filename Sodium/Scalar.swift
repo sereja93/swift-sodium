@@ -10,7 +10,7 @@ import Foundation
 import Clibsodium
 
 public struct Scalar {
-    public let size = Int(crypto_scalarmult_scalarbytes())
+    private let size = Int(crypto_scalarmult_scalarbytes())
 }
 extension Scalar {
     public func cryptoScalarMult(publicKey: Bytes, secretKey: Bytes) -> Bytes? {
@@ -22,4 +22,14 @@ extension Scalar {
         ).exitCode else { return nil }
         return result
     }
+    
+    public func cryptoScalarMultBase(secretKey: Bytes) -> Bytes? {
+        var publicKey = Bytes.init(count: size)
+        guard .SUCCESS == crypto_scalarmult_base(
+            &publicKey,
+            secretKey
+        ).exitCode else { return nil }
+        return publicKey
+    }
+    
 }
