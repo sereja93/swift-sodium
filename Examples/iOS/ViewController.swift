@@ -42,6 +42,14 @@ class ViewController: UIViewController {
         
         print(s)
 
+        
+        let pair = sodium.keyExchange.keyPair()!
+        let ss = sodium.scalar.cryptoScalarMultBase(secretKey: [UInt8](Data(base64Encoded: pair.secretKey.toBase64(), options: .ignoreUnknownCharacters)!))
+
+        
+        print(sodium.utils.bin2base64(pair.publicKey))
+        print(sodium.utils.bin2base64(pair.secretKey))
+        print(sodium.utils.bin2base64(ss!))
     
 
     }
@@ -50,4 +58,8 @@ class ViewController: UIViewController {
         super.didReceiveMemoryWarning()
     }
 }
-
+extension Array where Element == UInt8 {
+  func toBase64() -> String {
+    Data(self).base64EncodedString()
+  }
+}
